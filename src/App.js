@@ -6,10 +6,15 @@ import ReactPlayer from "react-player";
 // eslint-disable-next-line import/no-anonymous-default-export
 export default () => {
   const [linkTemp, setLnkTemp] = useState();
+  const search = window.location.search;
+  const params = new URLSearchParams(search);
+  const url = params.get('url');
   const [linkVideo, setLinkVideo] = useState(
-    "https://v3.szjal.cn/20191101/PZzNpqB1/index.m3u8"
+    url
   );
-
+  if(url){
+    window.location.href = '/'
+  }
   function onchange(event) {
     setLnkTemp(event.target.value);
   }
