@@ -12,9 +12,7 @@ export default () => {
   const [linkVideo, setLinkVideo] = useState(
     url
   );
-  if(url){
-    window.location.href = '/'
-  }
+ 
   function onchange(event) {
     setLnkTemp(event.target.value);
   }
